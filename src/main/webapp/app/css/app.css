@@ -1,65 +1,64 @@
 html {
-    font-family: "Arial,Verdana,sans-serif";
+	font-family: "Arial,Verdana,sans-serif";
 }
 
 body {
-    font-size: 0.875em;
-    background-color: #dbd9d9;
-    margin: 0px;
-    padding: 0;
-    /* max-width: 1200px;
-    MARGIN-LEFT: auto;
-    MARGIN-RIGHT: auto;  */
+	font-size: 0.875em;
+	background-color: #dbd9d9;
+	margin: 0px;
+	padding: 0;
 }
 
-.kalah{
+#test {
 	display: block;
-	height:380px;
-	width:150px;
-	background-color: aqua;
-	
 }
 
-.pit{
-	display:block;
-    width:250px;
-    height:180px;
+.kalah {
+	display: block;
+	height: 380px;
+	width: 150px;
+	background-color: #00bbff;
+	line-height: 130px;
+    text-align: center;
+}
+
+#gameboard  div:NTH-CHILD(3){
+	margin-left: -51px;
+}
+
+.pit {
+	display: block;
+	width: 150px;
+	height: 180px;
 	background-color: blue;
-    border: 1px solid rgba(10, 10, 10, 0.55);
+	border: 1px solid rgba(10, 10, 10, 0.55);
 }
 
-.board-players{
-	display:block;
-    width:80%;
-    height:380px;
-    background-color: gray;
-    overflow:hidden;
+.board-players {
+	width: 50%;
 }
 
-.board-player{
-	margin-bottom: 20px;
+
+
+.board-container {
+	display: block;
+	width: 100%;
+	height: 400px;
+	background-color: #475;
+	overflow: hidden;
+	padding-left: 20px;
 }
 
-.board-container{
-	display:block;
-    width:100%;
-    height:400px;
-    background-color:#475;
-    overflow:hidden;
-    padding-left: 20px;
+.stones {
+	display: block;
+	font-size: 64px;
+	color: white;
+	text-align: center;
 }
 
-.stones{
-	 display: block;
-	 font-size: 64px;
-	 color: white;
-	 text-align: center;
-}
-
-#currentPlayerMsg{
-	 display: block;
-	 font-size: 24px;
-	 color: black;
-	 text-align: center;
-	
+#currentPlayerMsg {
+	display: block;
+	font-size: 24px;
+	color: black;
+	text-align: center;
 }
