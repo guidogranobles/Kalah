@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <base href="./">
+    <title>Kalah Game</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app/css/foundation.css">
+    <link rel="stylesheet" href="app/css/foundation-icons/foundation-icons.css">
+    <link rel="stylesheet" href="app/css/app.css">
+
+    <!-- Polyfill(s) for older browsers -->
+    <script src="app/scripts/obrowsersp/shim.min.js"></script>
+    <script src="app/scripts/obrowsersp/zone/zone.js"></script>
+    <script src="app/scripts/obrowsersp/Reflect.js"></script>
+    <script src="app/scripts/obrowsersp/systemjs/system.src.js"></script>
+    <script src="app/scripts/conf/systemjs.config.js"></script>
+
+    <script>
+        System.import('app').catch(function (err) {
+            console.error(err);
+        });
+    </script>
+
+  
+</head>
+
+<body>
+    <kalah-app>Loading... xxx</kalah-app>
+</body>
+
+</html>
