@@ -11,6 +11,7 @@ public class GamePlayStatus {
 	private PlayerBoard boardPlayer2 = new PlayerBoard();
 	
 	private String status;
+	private Integer idWinner;
 
 	
 	public Integer getIdPlayer1() {
@@ -51,6 +52,14 @@ public class GamePlayStatus {
 
 	public void setStatus(String status) {
 		this.status = status;
+	}
+
+	public Integer getIdWinner() {
+		return idWinner;
+	}
+
+	public void setIdWinner(Integer idWinner) {
+		this.idWinner = idWinner;
 	}
 	
 	

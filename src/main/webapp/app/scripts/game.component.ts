@@ -81,7 +81,7 @@ export class Game {
                 this.gameInitiated = true;
             }
 
-            if (this.gameCurrentStatus.status == "next") {
+            if (this.gameCurrentStatus.status === "next") {
                 if (this.currentPlayer === this.idPlayer1) {
                     this.currentPlayer = this.idPlayer2;
                     this.currentPlayerName = this.namePlayer2;
@@ -98,13 +98,20 @@ export class Game {
                 
                 this.gameStatus = " is your turn!";
               
-            } else if(this.gameCurrentStatus.status == "repeat") {
+            } else if(this.gameCurrentStatus.status === "repeat") {
                  this.gameStatus = " is your turn again!!";
-            } else if(this.gameCurrentStatus.status == "winner") {
-                  this.gameStatus = " you are the winner!!!!";
-                  this.gameInitiated = false;
-                  this.boardP2Disabled = true;
-                  this.boardP1Disabled = true;
+            } else if(this.gameCurrentStatus.status === "winner") {
+                
+                 if (this.gameCurrentStatus.idWinner === this.idPlayer1) {
+                      this.currentPlayerName = this.namePlayer1;
+                 }else{
+                      this.currentPlayerName = this.namePlayer2;
+                 }
+                
+                 this.gameStatus = " you are the winner!!!!";
+                 this.gameInitiated = false;
+                 this.boardP2Disabled = true;
+                 this.boardP1Disabled = true;
             }
 
         }

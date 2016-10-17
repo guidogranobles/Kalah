@@ -208,8 +208,12 @@ public class GamePlay {
 		gameBoardDAO.save(currentPlayerBoard);
 		gameBoardDAO.save(secondPlayerBoard);
 
-		if (checkWinner(currentPlayerBoard)) {
-			status = "winner";
+		GamePlayStatus gamePlayStatus = loadPlayersBoard(currentPlayerBoard.getIdBoard());
+
+		Integer idWinner = checkWinner(currentPlayerBoard, secondPlayerBoard);
+		if (idWinner != null) {
+			status = "winner";		
+			gamePlayStatus.setIdWinner(idWinner);
 		}
 
 		/*
@@ -217,7 +221,6 @@ public class GamePlay {
 		 * we need to preserve the order of the players. It means who is player
 		 * 1 and who is player 2.
 		 */
-		GamePlayStatus gamePlayStatus = loadPlayersBoard(currentPlayerBoard.getIdBoard());
 		gamePlayStatus.setStatus(status);
 
 		return gamePlayStatus;
@@ -306,10 +309,27 @@ public class GamePlay {
 
 	}
 
-	private boolean checkWinner(GameBoard playerBoard) {
+	private Integer checkWinner(GameBoard currentPlayerBoard, GameBoard secondPlayerBoard) {
 
-		return ((playerBoard.getPit1() + playerBoard.getPit2() + playerBoard.getPit3() + playerBoard.getPit4()
-				+ playerBoard.getPit5() + playerBoard.getPit6()) == 0);
+		Integer idPlayerWinner = null;
+		
+		if(checkTotalStonesInPits(currentPlayerBoard) == 0){
+			secondPlayerBoard.setKalah(secondPlayerBoard.getKalah()+checkTotalStonesInPits(secondPlayerBoard));
+			idPlayerWinner =  currentPlayerBoard.getKalah() > secondPlayerBoard.getKalah() ? currentPlayerBoard.getIdplayer(): secondPlayerBoard.getIdplayer();
+		}else if(checkTotalStonesInPits(secondPlayerBoard) == 0){
+			currentPlayerBoard.setKalah(currentPlayerBoard.getKalah()+checkTotalStonesInPits(currentPlayerBoard));		
+			idPlayerWinner =  currentPlayerBoard.getKalah() > secondPlayerBoard.getKalah() ? currentPlayerBoard.getIdplayer(): secondPlayerBoard.getIdplayer();
+		}
+						
+		return idPlayerWinner; 
+	}
+	
+	
+	private int  checkTotalStonesInPits(GameBoard playerBoard){
+		
+		return (playerBoard.getPit1() + playerBoard.getPit2() + playerBoard.getPit3() + playerBoard.getPit4()
+		+ playerBoard.getPit5() + playerBoard.getPit6());
+		
 	}
 
 }
