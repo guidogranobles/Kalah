@@ -17,9 +17,8 @@ export class GameServices {
 
     
     private serviceUrl = {
-        startGame: '/Kalah-0.0.1-SNAPSHOT/rest/kalah/startGame',
-        updateGame: '/Kalah-0.0.1-SNAPSHOT/rest/kalah/updateGame',
-
+        startGame: '/kalahgame/rest/kalah/startGame',
+        updateGame: '/kalahgame/rest/kalah/updateGame',
     };
 
     startGameService(namePlayer1: string, namePlayer2: string): Observable<GameStatus> {
@@ -40,13 +39,12 @@ export class GameServices {
             .map(this.extractData)
             .catch(this.handleError);
     }
-
   
-
     private extractData(res: Response) {
         let body = res.json();
         return body || {};
     }
+    
     private handleError(error: any) {
         let errMsg = (error._body) ? JSON.parse(error._body) :
             error.status ? `${error.status} - ${error.statusText}` : 'Server error';

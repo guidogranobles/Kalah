@@ -1,9 +1,10 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.backbase.coding.chanllenge</groupId>
   <artifactId>Kalah</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   <name>kalah Maven Webapp</name>
   
@@ -106,7 +107,7 @@
 					</overlays>
 					<webappDirectory>
 						${project.build.directory}/${project.build.finalName}</webappDirectory>
-					<warSourceExcludes>node_modules/, typings/, server/, Dockerfile,
+					<warSourceExcludes>node_modules/, typings/, server/, Dockerfile, app/scripts/*.ts
 						LICENSE, *.js, *.md, *.json, .*</warSourceExcludes>
 
 				</configuration>
@@ -124,11 +125,11 @@
 				<groupId>org.wildfly.plugins</groupId>
 				<artifactId>wildfly-maven-plugin</artifactId>
 				<version>1.1.0.Alpha11</version>
-				<configuration>
+				<!-- <configuration>
 					<wildfly-home>D:\Development\wildfly-8.1.0.Final</wildfly-home>
 					<hostname>localhost</hostname>
 					<port>9995</port>
-				</configuration>
+				</configuration>-->
 				<executions>
 					<execution>
 						<phase>install</phase>
@@ -136,8 +137,9 @@
 							<goal>deploy</goal>
 						</goals>
 					</execution>
-				</executions>
+				</executions> 
 			</plugin>
 		</plugins>
   </build>
+  <version>0.0.1-SNAPSHOT</version>
 </project>

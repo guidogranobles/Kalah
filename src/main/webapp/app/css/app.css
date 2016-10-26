@@ -9,6 +9,10 @@ body {
 	padding: 0;
 }
 
+form{
+	padding: 10px;
+}
+
 #test {
 	display: block;
 }
@@ -16,26 +20,29 @@ body {
 .kalah {
 	display: block;
 	height: 380px;
-	width: 150px;
+	width: 10%;
 	background-color: #00bbff;
 	line-height: 130px;
     text-align: center;
 }
 
-#gameboard  div:NTH-CHILD(3){
-	margin-left: -51px;
+#gameboard{
+	padding:10px;
 }
 
 .pit {
 	display: block;
-	width: 150px;
+	width: 16%;
 	height: 180px;
 	background-color: blue;
 	border: 1px solid rgba(10, 10, 10, 0.55);
+	margin-left: 4px;
+	margin-bottom: 20px;
 }
 
 .board-players {
-	width: 50%;
+	width: 80%;
+	rgba(127, 255, 212, 0.27);
 }
 
 

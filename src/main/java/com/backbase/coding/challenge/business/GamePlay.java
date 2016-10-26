@@ -208,6 +208,11 @@ public class GamePlay {
 		gameBoardDAO.save(currentPlayerBoard);
 		gameBoardDAO.save(secondPlayerBoard);
 
+		/*
+		 * We need to reload the game status updated. This is like this because
+		 * we need to preserve the order of the players. It means who is player
+		 * 1 and who is player 2.
+		 */
 		GamePlayStatus gamePlayStatus = loadPlayersBoard(currentPlayerBoard.getIdBoard());
 
 		Integer idWinner = checkWinner(currentPlayerBoard, secondPlayerBoard);
@@ -216,11 +221,7 @@ public class GamePlay {
 			gamePlayStatus.setIdWinner(idWinner);
 		}
 
-		/*
-		 * We need to reload the game status updated. This is like this because
-		 * we need to preserve the order of the players. It means who is player
-		 * 1 and who is player 2.
-		 */
+		
 		gamePlayStatus.setStatus(status);
 
 		return gamePlayStatus;

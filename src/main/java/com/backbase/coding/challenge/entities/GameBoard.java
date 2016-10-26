@@ -17,7 +17,7 @@ import javax.persistence.Table;
 @Table(name = "gameboard")
 @NamedQueries({ @NamedQuery(name = GameBoard.GAME_FINDAll, query = "SELECT g FROM GameBoard g"),
 				@NamedQuery(name = GameBoard.GAME_LOAD, query = "SELECT g FROM GameBoard g where g.idBoard= :idHashBoard"),
-				@NamedQuery(name = GameBoard.GAME_LOADBOARD, query = "SELECT g FROM GameBoard g where g.idBoard= :idHashBoard and idplayer= :idPlayer")})
+				@NamedQuery(name = GameBoard.GAME_LOADBOARD, query = "SELECT g FROM GameBoard g where g.idBoard= :idHashBoard and g.idplayer= :idPlayer")})
 public class GameBoard implements Serializable {
 	private static final long serialVersionUID = 1L;
 

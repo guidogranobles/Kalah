@@ -13,7 +13,7 @@ import {UpdateInfo}  from './updateInfo.model';
 export class Game {
 
     errorMessage: string;
-    responseManager: (messageType: string, message: string) => void;
+   // responseManager: (messageType: string, message: string) => void;
 
     idPlayer1: number = 0;
     idPlayer2: number = 0;
@@ -65,13 +65,15 @@ export class Game {
 
     private errorHandler(error: string) {
         this.errorMessage = error;
-        this.responseManager('Error', this.errorMessage);
+        //this.responseManager('Error', this.errorMessage);
+        console.log(error);
     }
 
     private responseProcessor(results: GameStatus, action: string) {
         if (results === null) {
             this.errorMessage = 'No results found';
-            this.responseManager('Info', this.errorMessage);
+           //this.responseManager('Info', this.errorMessage);
+             console.log(this.errorMessage);
         } else {
             this.gameCurrentStatus = results;
 
