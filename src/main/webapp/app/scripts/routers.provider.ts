@@ -1,12 +1,12 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import {Game}           from './game.component';
+import {GameComponent}           from './components/game.component';
 
 export const appRoutes: Routes = [
   {
       path: '',
-      component: Game 
+      component: GameComponent 
   }
 ];
 

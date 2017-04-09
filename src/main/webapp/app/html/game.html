@@ -60,95 +60,95 @@
 				<div class="column kalah">
 					Kalah
 					<div class="stones">
-						<span>{{gameCurrentStatus.boardPlayer2.kalah}}</span>
+						<span>{{serverStatus.boardPlayer2.kalah}}</span>
 					</div>
 				</div>
 				<div class="column large-8 board-players">
 					<div class="row">
 						<button class="column large-1 pit button"
-							[disabled]="boardP2Disabled || (gameCurrentStatus.boardPlayer2.pit6===0)" (click)="emptyPit(6)">
+							[disabled]="boardP2Disabled || (serverStatus.boardPlayer2.pit6===0)" (click)="emptyPit(6)">
 							6
 							<div class="stones">
-								<span>{{gameCurrentStatus.boardPlayer2.pit6}}</span>
+								<span>{{serverStatus.boardPlayer2.pit6}}</span>
 							</div>
 						</button>
 						<button class="column large-1 pit button"
-							[disabled]="boardP2Disabled || (gameCurrentStatus.boardPlayer2.pit5===0)" (click)="emptyPit(5)">
+							[disabled]="boardP2Disabled || (serverStatus.boardPlayer2.pit5===0)" (click)="emptyPit(5)">
 							5
 							<div class="stones">
-								<span>{{gameCurrentStatus.boardPlayer2.pit5}}</span>
+								<span>{{serverStatus.boardPlayer2.pit5}}</span>
 							</div>
 						</button>
 						<button class="column large-1 pit button"
-							[disabled]="boardP2Disabled || (gameCurrentStatus.boardPlayer2.pit4===0)" (click)="emptyPit(4)">
+							[disabled]="boardP2Disabled || (serverStatus.boardPlayer2.pit4===0)" (click)="emptyPit(4)">
 							4
 							<div class="stones">
-								<span>{{gameCurrentStatus.boardPlayer2.pit4}}</span>
+								<span>{{serverStatus.boardPlayer2.pit4}}</span>
 							</div>
 						</button>
 						<button class="column large-1 pit button"
-							[disabled]="boardP2Disabled || (gameCurrentStatus.boardPlayer2.pit3===0)" (click)="emptyPit(3)">
+							[disabled]="boardP2Disabled || (serverStatus.boardPlayer2.pit3===0)" (click)="emptyPit(3)">
 							3
 							<div class="stones">
-								<span>{{gameCurrentStatus.boardPlayer2.pit3}}</span>
+								<span>{{serverStatus.boardPlayer2.pit3}}</span>
 							</div>
 						</button>
 						<button class="column large-1 pit button"
-							[disabled]="boardP2Disabled || (gameCurrentStatus.boardPlayer2.pit2===0)" (click)="emptyPit(2)">
+							[disabled]="boardP2Disabled || (serverStatus.boardPlayer2.pit2===0)" (click)="emptyPit(2)">
 							2
 							<div class="stones">
-								<span>{{gameCurrentStatus.boardPlayer2.pit2}}</span>
+								<span>{{serverStatus.boardPlayer2.pit2}}</span>
 							</div>
 						</button>
 						<button class="column large-1  pit  button end"
-							[disabled]="boardP2Disabled || (gameCurrentStatus.boardPlayer2.pit1===0)" (click)="emptyPit(1)">
+							[disabled]="boardP2Disabled || (serverStatus.boardPlayer2.pit1===0)" (click)="emptyPit(1)">
 							1
 							<div class="stones">
-								<span>{{gameCurrentStatus.boardPlayer2.pit1}}</span>
+								<span>{{serverStatus.boardPlayer2.pit1}}</span>
 							</div>
 						</button>
 					</div>
 					<div class="row">
 						<button class="column large-1  pit button"
-							[disabled]="boardP1Disabled || (gameCurrentStatus.boardPlayer1.pit1===0)" (click)="emptyPit(1)">
+							[disabled]="boardP1Disabled || (serverStatus.boardPlayer1.pit1===0)" (click)="emptyPit(1)">
 							1
 							<div class="stones">
-								<span>{{gameCurrentStatus.boardPlayer1.pit1}}</span>
+								<span>{{serverStatus.boardPlayer1.pit1}}</span>
 							</div>
 						</button>
 						<button class="column large-1  pit button"
-							[disabled]="boardP1Disabled || (gameCurrentStatus.boardPlayer1.pit2===0)" (click)="emptyPit(2)">
+							[disabled]="boardP1Disabled || (serverStatus.boardPlayer1.pit2===0)" (click)="emptyPit(2)">
 							2
 							<div class="stones">
-								<span>{{gameCurrentStatus.boardPlayer1.pit2}}</span>
+								<span>{{serverStatus.boardPlayer1.pit2}}</span>
 							</div>
 						</button>
 						<button class="column large-1  pit button"
-							[disabled]="boardP1Disabled || (gameCurrentStatus.boardPlayer1.pit3===0)" (click)="emptyPit(3)">
+							[disabled]="boardP1Disabled || (serverStatus.boardPlayer1.pit3===0)" (click)="emptyPit(3)">
 							3
 							<div class="stones">
-								<span>{{gameCurrentStatus.boardPlayer1.pit3}}</span>
+								<span>{{serverStatus.boardPlayer1.pit3}}</span>
 							</div>
 						</button>
 						<button class="column large-1  pit button"
-							[disabled]="boardP1Disabled || (gameCurrentStatus.boardPlayer1.pit4===0)" (click)="emptyPit(4)">
+							[disabled]="boardP1Disabled || (serverStatus.boardPlayer1.pit4===0)" (click)="emptyPit(4)">
 							4
 							<div class="stones">
-								<span>{{gameCurrentStatus.boardPlayer1.pit4}}</span>
+								<span>{{serverStatus.boardPlayer1.pit4}}</span>
 							</div>
 						</button>
 						<button class="column large-1  pit button"
-							[disabled]="boardP1Disabled || (gameCurrentStatus.boardPlayer1.pit5===0)" (click)="emptyPit(5)">
+							[disabled]="boardP1Disabled || (serverStatus.boardPlayer1.pit5===0)" (click)="emptyPit(5)">
 							5
 							<div class="stones">
-								<span>{{gameCurrentStatus.boardPlayer1.pit5}}</span>
+								<span>{{serverStatus.boardPlayer1.pit5}}</span>
 							</div>
 						</button>
 						<button class="column large-1 end  pit button"
-							[disabled]="boardP1Disabled || (gameCurrentStatus.boardPlayer1.pit6===0)" (click)="emptyPit(6)">
+							[disabled]="boardP1Disabled || (serverStatus.boardPlayer1.pit6===0)" (click)="emptyPit(6)">
 							6
 							<div class="stones">
-								<span>{{gameCurrentStatus.boardPlayer1.pit6}}</span>
+								<span>{{serverStatus.boardPlayer1.pit6}}</span>
 							</div>
 						</button>
 					</div>
@@ -158,7 +158,7 @@
 				<div class="column kalah end">
 					Kalah
 					<div class="stones">
-						<span>{{gameCurrentStatus.boardPlayer1.kalah}}</span>
+						<span>{{serverStatus.boardPlayer1.kalah}}</span>
 					</div>
 				</div>
 
