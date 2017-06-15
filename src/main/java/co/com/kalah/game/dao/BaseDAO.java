@@ -1,4 +1,4 @@
-package com.backbase.coding.challenge.dao;
+package co.com.kalah.game.dao;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
@@ -238,7 +238,7 @@ public class BaseDAO<T> {
 		} catch (Exception e) {
 			System.out.println("Advertencia en  buscarRegistroUnico");
 			/**
-			 * En caso de haber un error en la consulta manejamos la excepción
+			 * En caso de haber un error en la consulta manejamos la excepciï¿½n
 			 */
 			e.printStackTrace();
 			if (e.getCause() != null) {

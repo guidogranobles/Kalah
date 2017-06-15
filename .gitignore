@@ -20,3 +20,4 @@ src/main/webapp/app/scripts/*.map
 src/main/webapp/app/scripts/thirdparty
 src/main/webapp/app/scripts/locales/**
 target
+/build/

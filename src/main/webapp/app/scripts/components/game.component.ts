@@ -11,9 +11,8 @@ import { deepCopy } from '../util';
 
 @Component({
     selector: 'kl-game',
-    templateUrl: '../../html/game.html',
-    styleUrls: [require('../../css/foundation.css'), 
-                require('../../css/app.css')]
+    templateUrl: './game.html',
+    styleUrls: ['./game.css']
 
 
 })

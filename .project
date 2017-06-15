@@ -41,6 +41,11 @@
 			</arguments>
 		</buildCommand>
 		<buildCommand>
+			<name>com.genuitec.eclipse.typescript.typeScriptBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
 			<name>org.eclipse.m2e.core.maven2Builder</name>
 			<arguments>
 			</arguments>
@@ -71,4 +76,24 @@
 			<location>C:/Users/Guido/.p2/pool/plugins/com.axmor.eclipse.typescript.core_4.0.0.201508061529/lib/typescript-bridge/ts/lib.d.ts</location>
 		</link>
 	</linkedResources>
+	<filteredResources>
+		<filter>
+			<id>1476855036965</id>
+			<name></name>
+			<type>10</type>
+			<matcher>
+				<id>org.eclipse.ui.ide.multiFilter</id>
+				<arguments>1.0-name-matches-false-false-node_modules</arguments>
+			</matcher>
+		</filter>
+		<filter>
+			<id>1476855036968</id>
+			<name></name>
+			<type>10</type>
+			<matcher>
+				<id>org.eclipse.ui.ide.multiFilter</id>
+				<arguments>1.0-name-matches-false-false-.ts</arguments>
+			</matcher>
+		</filter>
+	</filteredResources>
 </projectDescription>

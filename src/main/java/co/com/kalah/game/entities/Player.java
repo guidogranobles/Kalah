@@ -1,4 +1,4 @@
-package com.backbase.coding.challenge.entities;
+package co.com.kalah.game.entities;
 
 import java.io.Serializable;
 import java.util.List;

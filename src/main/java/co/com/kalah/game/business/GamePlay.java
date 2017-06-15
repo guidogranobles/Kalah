@@ -1,4 +1,4 @@
-package com.backbase.coding.challenge.business;
+package co.com.kalah.game.business;
 
 import java.util.HashMap;
 import java.util.List;
@@ -7,20 +7,20 @@ import java.util.Map;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 
-import com.backbase.coding.challenge.dao.GameBoardDAO;
-import com.backbase.coding.challenge.dao.PlayerDAO;
-import com.backbase.coding.challenge.dto.GamePlayStatus;
-import com.backbase.coding.challenge.dto.GamePlayUpdate;
-import com.backbase.coding.challenge.entities.GameBoard;
-import com.backbase.coding.challenge.entities.Player;
+import co.com.kalah.game.dao.GameBoardDAO;
+import co.com.kalah.game.dao.PlayerDAO;
+import co.com.kalah.game.dto.GamePlayStatus;
+import co.com.kalah.game.dto.GamePlayUpdate;
+import co.com.kalah.game.entities.GameBoard;
+import co.com.kalah.game.entities.Player;
 
 /**
  * ****************************************************************.
  * 
  * @autor: Guido Granobles
  * @fecha: 15/10/2016
- * @descripción: This class manage all the game operations.
- * @copyright: Copyright © 2016 GG.
+ * @descripciï¿½n: This class manage all the game operations.
+ * @copyright: Copyright ï¿½ 2016 GG.
  *             ****************************************************************
  */
 

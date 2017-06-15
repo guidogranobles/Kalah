@@ -7,7 +7,8 @@ module.exports = {
   entry: {
     'polyfills': './app/scripts/polyfills.ts',
     'vendor': './app/scripts/vendor.ts',
-    'app': './app/scripts/main.ts'   
+    'app': './app/scripts/main.ts',
+    'styles':'./css/foundation.css'
   },
 
   resolve: {
@@ -33,15 +34,15 @@ module.exports = {
         test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
         loader: 'file-loader?name=assets/[name].[hash].[ext]'
       },
-      /*{
-        test: /\.css$/,
-        exclude: helpers.root('./', 'app'),
-        loader: ExtractTextPlugin.extract({ fallbackLoader: 'style-loader', loader: 'css-loader' })
-      },*/
       {
         test: /\.css$/,
+        exclude: helpers.root('./', 'app'),
+        loader: ExtractTextPlugin.extract({ fallbackLoader: 'style-loader', loader: 'css-loader?sourceMap' })
+      },
+     {
+        test: /\.css$/,
         include: helpers.root('./', 'app'),
-        loader: 'style-loader'
+        loader: 'raw-loader'
       }
     ]
   },
@@ -55,6 +56,10 @@ module.exports = {
       {} // a map of your routes
     ),
     
+    
+   // new ExtractTextPlugin('style.css'),
+    
+    
     new webpack.optimize.CommonsChunkPlugin({
       name: ['app', 'vendor', 'polyfills']
     }),
@@ -63,4 +68,5 @@ module.exports = {
       template: './index.html'
     })
   ]
+   
 };

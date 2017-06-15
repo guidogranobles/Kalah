@@ -1,4 +1,4 @@
-package com.backbase.coding.challenge.dto;
+package co.com.kalah.game.dto;
 
 public class GamePlayUpdate {
 
